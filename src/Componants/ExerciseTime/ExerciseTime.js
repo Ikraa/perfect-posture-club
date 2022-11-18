@@ -39,7 +39,7 @@ const ExerciseTime = ({ cart, setCart }) => {
       <div className="flex mb-7">
         <div class="avatar mr-4">
           <div class="w-16">
-            <img src="https://placeimg.com/192/192/people" alt="" />
+            <img src="https://placeimg.com/192/192/people" alt="profile pic" />
           </div>
         </div>
         <div>
