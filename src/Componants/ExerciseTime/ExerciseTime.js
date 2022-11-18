@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LocationImg from "../../img/location.png";
 import Time from "./Time";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 const getFromLocalStorage = () => {
   const data = localStorage.getItem("item");
   let getItem;
@@ -19,7 +19,7 @@ const ExerciseTime = ({ cart, setCart }) => {
     (prev, current) => prev + current.time,
     0
   );
-  const breatTimeData = [
+  const breakTimeData = [
     { id: 1, time: 15 },
     { id: 2, time: 25 },
     { id: 3, time: 35 },
@@ -45,14 +45,15 @@ const ExerciseTime = ({ cart, setCart }) => {
         <div>
           <p className="text-2xl font-bold text-gray-700 mb-2">Ikra Munnisa</p>
           <div className="flex items-center">
-            <img className="w-6 h-6 mr-2" src={LocationImg} alt="" />
-            <p className="text-lg text-gray-600"> 1/2, JoynalMarket,Uttara</p>
+            <img className="w-6 h-6 mr-2" src={LocationImg} alt="location pic" />
+            <p className="text-lg text-gray-600"> 1/2, Joynal Market,Uttara</p>
           </div>
         </div>
       </div>
-
+      
+      <p className="text-gray-600 mb-2 mt-4 text-lg font-semibold">Add a break Time</p>
       <div className="flex flex-wrap  bg-slate-200 rounded-[8px] p-[12px]">
-        {breatTimeData.map((item, i) => (
+        {breakTimeData.map((item, i) => (
           <Time
             key={i}
             item={item}
@@ -77,7 +78,7 @@ const ExerciseTime = ({ cart, setCart }) => {
       </p>
 
       <button
-        className="btn btn-primary btn-sm w-full mt-2"
+        className="btn btn-primary btn-sm w-full mt-4"
         onClick={() => {
           //-----------------//
           setCart([]);

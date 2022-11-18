@@ -24,7 +24,7 @@ const Home = () => {
     <div className="mx-[10px]">
       <div className="lg:grid grid-cols-10 gap-4">
         <div className="col-span-7">
-            <div className="flex items-center my-4">
+            <div className="flex items-center my-10">
           <div className="avatar mr-4">
             <div className="w-12 rounded-full">
               <img src={Logo} alt="" />
