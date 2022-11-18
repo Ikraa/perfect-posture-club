@@ -1,3 +1,4 @@
+// Handle home page
 import React, { useEffect, useState } from "react";
 import PostureCard from "../Card/PostureCard";
 import ExerciseTime from "../ExerciseTime/ExerciseTime";

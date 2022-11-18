@@ -1,3 +1,4 @@
+// Handle ExerciseTime  and function
 import React, { useEffect, useState } from "react";
 import LocationImg from "../../img/location.png";
 import Time from "./Time";
@@ -24,7 +25,7 @@ const ExerciseTime = ({ cart, setCart }) => {
     { id: 2, time: 25 },
     { id: 3, time: 35 },
     { id: 4, time: 50 },
-    { id: 5, time: 100 },
+    { id: 5, time: 100},
   ];
 
   useEffect(() => {
@@ -32,7 +33,7 @@ const ExerciseTime = ({ cart, setCart }) => {
     setBreakTime(data);
     setIsClick(breakTime.index);
   }, []);
-  console.log(breakTime);
+  //   console.log(breakTime);
 
   return (
     <div>
@@ -45,13 +46,19 @@ const ExerciseTime = ({ cart, setCart }) => {
         <div>
           <p className="text-2xl font-bold text-gray-700 mb-2">Ikra Munnisa</p>
           <div className="flex items-center">
-            <img className="w-6 h-6 mr-2" src={LocationImg} alt="location pic" />
+            <img
+              className="w-6 h-6 mr-2"
+              src={LocationImg}
+              alt="location pic"
+            />
             <p className="text-lg text-gray-600"> 1/2, Joynal Market,Uttara</p>
           </div>
         </div>
       </div>
-      
-      <p className="text-gray-600 mb-2 mt-4 text-lg font-semibold">Add a break Time</p>
+
+      <p className="text-gray-600 mb-2 mt-4 text-lg font-semibold">
+        Add a break Time (sec)
+      </p>
       <div className="flex flex-wrap  bg-slate-200 rounded-[8px] p-[12px]">
         {breakTimeData.map((item, i) => (
           <Time
@@ -63,7 +70,7 @@ const ExerciseTime = ({ cart, setCart }) => {
             breakTime={breakTime}
             click={click}
           />
-        ))}
+       ))}
       </div>
 
       <p className="text-gray-600 mb-2 text-lg font-semibold">
