@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 const Time = ({ item, setIsClick, click, setBreakTime, i, breakTime }) => {
   const isMatch = localStorage.getItem("title");
   return (
@@ -11,7 +10,7 @@ const Time = ({ item, setIsClick, click, setBreakTime, i, breakTime }) => {
         localStorage.setItem("item", JSON.stringify(item));
       }}
       className={`h-6 w-6 mb-2 lg:mb-0   text-white font-bold mr-2 flex cursor-pointer  items-center justify-center p-6 rounded-full ${
-        click === i || +isMatch=== +item.id ? "bg-red-500" : "bg-blue-600"
+        click === i || +isMatch === +item.id ? "bg-red-500" : "bg-blue-600"
       }`}
     >
       {item.time}

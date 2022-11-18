@@ -4,12 +4,12 @@ import ExerciseTime from "../ExerciseTime/ExerciseTime";
 import Logo from "../../img/logo/logo-2.png";
 
 const Home = () => {
-  const [players, setPlayers] = useState([]);
+  const [exercise, setExercise] = useState([]);
   const [cart, setCart] = useState([]);
   useEffect(() => {
-    fetch("data.json")
+    fetch("fakeData.json")
       .then((res) => res.json())
-      .then((data) => setPlayers(data));
+      .then((data) => setExercise(data));
   }, []);
 
   const addToCart = (item) => {
@@ -30,16 +30,16 @@ const Home = () => {
               <img src={Logo} alt="" />
             </div>
           </div>
-          <h1 className="text-2xl font-bold text-black">Hero Fitness and Strength Club</h1>
+          <h1 className="text-2xl font-bold text-black">Perfect Posture Club</h1>
           </div>
           <div className="lg:grid grid-cols-3 gap-4">
-            {players.map((item) => (
+            {exercise.map((item) => (
               <PostureCard
                 key={item.id}
                 addToCart={addToCart}
                 removeToCart={removeToCart}
                 cart={cart}
-                player={item}
+                exercise={item}
               />
             ))}
           </div>
@@ -49,7 +49,7 @@ const Home = () => {
         <div className="col-span-3">
           <div className="card   shadow-xl">
             <div className="card-body">
-              <ExerciseTime cart={cart} />
+              <ExerciseTime setCart={setCart} cart={cart} />
             </div>
           </div>
         </div>

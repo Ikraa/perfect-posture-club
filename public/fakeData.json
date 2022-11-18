@@ -1,0 +1,69 @@
+[
+    {
+        "id": 1,
+        "time": 30,
+        "unit":"s",
+        "startAge": 20,
+        "toAge":30,
+        "ageUnit": "y",
+        "name": "Side Arms Raises",
+        "details": " Raising your arms to the side in a plane-like position is also called a shoulder abduction.So slowly it will help to make perfect posture.",
+        "url": "https://storage.googleapis.com/sworkit-assets/images/exercises/standard/middle-frame/arm-raise.jpg"
+
+    },
+    {
+        "id": 2,
+        "time": 30,
+        "unit":"s",
+        "startAge": 20,
+        "toAge":30,
+        "ageUnit": "y",
+        "name": "Shoulder Rolls",
+        "details": "Stand straight with your arms by your sides and with your feet shoulder-width apart. Slowly rotate your shoulders forward, making big circles. Repeat the movement set is complete",
+        "url": "https://kcdn-dfbd.kxcdn.com/wp-content/uploads/2019/08/Shoulder-Rolls-e1592890040672.png"
+    },
+    {
+        "id": 3,
+        "time": 10,
+        "unit":"s",
+        "startAge": 20,
+        "toAge":30,
+        "ageUnit": "y",
+        "name": "Standing Side Bends",
+        "details": "Stand with feet shoulder-width apart, hands on your waist. Bend your torso to the side, as far as it feels comfortable with dumbbell, and pause. Return to the initial position and the repeat on the other side",
+        "url": "https://i.ytimg.com/vi/dL9ZzqtQI5c/maxresdefault.jpg"
+    },
+    {
+        "id": 4,
+        "time": 10,
+        "unit":"s",
+        "startAge": 20,
+        "toAge":30,
+        "ageUnit": "y",
+        "name": "Cat Cow",
+        "details": "Keep your hands shoulder-width apart & your knees directly below your hips. Inhale deeply while curving your lower back & bringing your head up & pelvis up like a 'cow' Exhale deeply & bring your belly in, arching your spine & bringing your head & pelvis down like a 'cat' Repeat several times",
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTms84_mSjLY3U4JPMan12Pq0Ld9uXe9FIegA&usqp=CAU"
+    },
+    {
+        "id": 5,
+        "time": 10,
+        "unit":"s",
+        "startAge": 20,
+        "toAge":30,
+        "ageUnit": "y",
+        "name": "Donkey Kicks",
+        "details": " Start by lying face up on your mat, knees bent with your feet on the floor & palms facing down at your sides. Inhale, push in through your heels, raise your butt & back off the ground. Squeeze glutes at the top.Slowly lower back down to the ground & repeat it.",
+        "url": "https://s.yimg.com/ny/api/res/1.2/Q_RQ0kSM_rHKQlbLWydi_A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MA--/https://s.yimg.com/os/en-AU/homerun/y7.menshealth/bfbd6d5622e62bbf5729505f3a853574"
+    },
+    {
+        "id": 6,
+        "time": 10,
+        "unit":"s",
+        "startAge": 20,
+        "toAge":30,
+        "ageUnit": "y",
+        "name": "Seated Side Stretch",
+        "details": "Start in easy pose and place your left hand on the floor with your elbow slightly bent. Reach your right arm up and overhead and lean to the left side. Hold the pose for 30 seconds to 1 minute, this is very beneficial stretch for human health.So repeat it and switch it with other side.",
+        "url": "https://i.ytimg.com/vi/gRJ6xh1lLPA/maxresdefault.jpg"
+    }
+]

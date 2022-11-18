@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import LocationImg from "../../img/location.png";
 import Time from "./Time";
-import { ToastContainer, toast } from 'react-toastify';
-const getFromLocalStorage=()=>{
-    const data=localStorage.getItem("item")
-    let getItem;
-    if(data){
-         getItem=JSON.parse(data)
-    }else{
-        getItem={}
-    }
-    return getItem
-}
-const ExerciseTime = ({ cart }) => {
+import { ToastContainer, toast } from "react-toastify";
+const getFromLocalStorage = () => {
+  const data = localStorage.getItem("item");
+  let getItem;
+  if (data) {
+    getItem = JSON.parse(data);
+  } else {
+    getItem = {};
+  }
+  return getItem;
+};
+const ExerciseTime = ({ cart, setCart }) => {
   const [breakTime, setBreakTime] = useState({});
-  const [click,setIsClick]=useState(0)
+  const [click, setIsClick] = useState(0);
   const totalexerciseTime = cart.reduce(
     (prev, current) => prev + current.time,
     0
@@ -27,13 +27,13 @@ const ExerciseTime = ({ cart }) => {
     { id: 5, time: 100 },
   ];
 
-  useEffect(()=>{
-  const data=getFromLocalStorage()
-  setBreakTime(data)
-  setIsClick(breakTime.index)
-  },[])
-  console.log(breakTime)
- 
+  useEffect(() => {
+    const data = getFromLocalStorage();
+    setBreakTime(data);
+    setIsClick(breakTime.index);
+  }, []);
+  console.log(breakTime);
+
   return (
     <div>
       <div className="flex mb-7">
@@ -43,7 +43,7 @@ const ExerciseTime = ({ cart }) => {
           </div>
         </div>
         <div>
-          <p className="text-2xl font-bold text-gray-700 mb-2">Ikra Munnisha</p>
+          <p className="text-2xl font-bold text-gray-700 mb-2">Ikra Munnisa</p>
           <div className="flex items-center">
             <img className="w-6 h-6 mr-2" src={LocationImg} alt="" />
             <p className="text-lg text-gray-600"> 1/2, JoynalMarket,Uttara</p>
@@ -52,8 +52,16 @@ const ExerciseTime = ({ cart }) => {
       </div>
 
       <div className="flex flex-wrap  bg-slate-200 rounded-[8px] p-[12px]">
-        {breatTimeData.map((item,i) => (
-          <Time key={i}  item={item} setBreakTime={setBreakTime}  i={i} setIsClick={setIsClick} breakTime={breakTime} click={click}/>
+        {breatTimeData.map((item, i) => (
+          <Time
+            key={i}
+            item={item}
+            setBreakTime={setBreakTime}
+            i={i}
+            setIsClick={setIsClick}
+            breakTime={breakTime}
+            click={click}
+          />
         ))}
       </div>
 
@@ -68,9 +76,20 @@ const ExerciseTime = ({ cart }) => {
         <span>Break time</span> <span>{breakTime.time}</span>
       </p>
 
-
-
-      <button>Activity Complete</button>
+      <button
+        className="btn btn-primary btn-sm w-full mt-2"
+        onClick={() => {
+          //-----------------//
+          setCart([]);
+          setBreakTime({});
+          setIsClick();
+          localStorage.clear("item", "title");
+          //==========//
+          toast.success("Successfully completed your activity  ");
+        }}
+      >
+        Activity Complete
+      </button>
     </div>
   );
 };
