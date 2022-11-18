@@ -1,4 +1,4 @@
-//  Handle time set 
+//  Handle time-set 
   const Time = ({ item, setIsClick, click, setBreakTime, i}) => {
   const isMatch = localStorage.getItem("title");
   return (
